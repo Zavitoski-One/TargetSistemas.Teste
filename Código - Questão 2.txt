@@ -1,0 +1,28 @@
+//Sequência de Fibonacci
+
+#include <stdio.h>
+
+int main()
+{
+    int n1=0, n2=1, n3=0;
+    int i = 0, j;
+    
+    printf("\n\nDigite um numero:\n");
+    scanf("%d", &i);
+    
+    while (i>n3){
+        n3 = n1 + n2;
+        n1 = n2;
+        n2 = n3;
+    }
+    
+    if(i == 0){
+        printf("O numero esta na sequencia de Fibonacci! O próximo número é: 1");
+    }else if(i == n3){
+        printf("O numero %d esta na sequencia de Fibonacci, o proximo numero e: %d", i, n1+i);
+    }else{
+        printf("Este numero nao esta na sequencia de Fibonacci.");
+    }
+    
+    return 0;
+}

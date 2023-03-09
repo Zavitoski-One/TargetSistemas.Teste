@@ -1,0 +1,22 @@
+// ---> Código em C, sem nenhuma função pré-definida:
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>  //Biblioteca necessária para usar as funções strcpy e strlen
+
+int main(){
+       char palavra[50],aux[50];
+       int i,j;
+       printf("Digite a frase ou palavra a ser invertida: \n");
+       gets(palavra);  
+       j=strlen(palavra)-1;    //strlen calcula a quantidade de caracteres que tem a string
+       for(i=0;palavra[i]!='\0';i++){        
+       aux[j]=palavra[i];
+       j--;     
+       }
+       aux[i]='\0';      //Se nao colocar essa parte, o programa pode mostrar LIXO
+       strcpy(palavra,aux);    //Copia para a variável string o conteúdo da variável auxiliar
+       printf("\n\nA frase inversa e: %s\n\n",palavra);
+system("pause");
+}
+
